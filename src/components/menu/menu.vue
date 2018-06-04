@@ -67,6 +67,10 @@ export default {
                             link: '/customUI/icon'
                         },
                         {
+                            name: 'cUI-copyToClipboard',
+                            link: '/customUI/copyToClipboard'
+                        },
+                        {
                             name: 'cUI-upload',
                             link: '/customUI/upload'
                         },

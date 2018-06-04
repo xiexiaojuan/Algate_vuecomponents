@@ -1,5 +1,9 @@
+<style type="text/css">
+    .el-row { margin: 0; }
+    .el-col { margin-bottom: 20px; }
+</style>
 <template>
-    <section>
+    <article>
         <div id="lineDrawing">
             <svg viewBox="0 0 280 100">
                 <g fill="none" fill-rule="evenodd" stroke-opacity="0.8" stroke="#none" stroke-width="1px" class="lines">
@@ -13,14 +17,20 @@
                 </g>
             </svg>
         </div>
-    </section>
+        <nav>
+            <el-row :gutter="20" style="margin-left:0;margin-right:0;">
+                <router-link :to="'/knowledge/'+link.name" v-for="link in navlist" :key="link.name"><el-col :span="6"><el-card shadow="hover">{{link.name}}</el-card></el-col></router-link>
+            </el-row>
+        </nav>
+    </article>
 </template>
 <script>
 import anime from 'animejs';
+import { navKnowledgeList } from './welcome';
 export default {
     data() {
         return {
-
+            navlist: navKnowledgeList
         };
     },
     mounted() {
