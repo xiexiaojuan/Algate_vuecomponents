@@ -22,6 +22,7 @@
                 <router-link :to="'/knowledge/'+link.name" v-for="link in navlist" :key="link.name"><el-col :span="6"><el-card shadow="hover">{{link.name}}</el-card></el-col></router-link>
             </el-row>
         </nav>
+        <div>hello</div>
     </article>
 </template>
 <script>
